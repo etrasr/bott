@@ -30,7 +30,7 @@ from telegram.ext import (
 )
 
 # ------------------------------ CONFIG ------------------------------
-BOT_TOKEN = "8564241987:AAGQsOJiFi6N4ezY8fm5xh-6xBn6wBw2__w"
+BOT_TOKEN = os.environ.get('BOT_TOKEN')  # CHANGED THIS LINE
 ADMIN_GROUP_ID = -1004877281951  # Changed admin group ID
 CHANNEL_ID = -1003479727543     # Changed channel ID
 BOT_USERNAME = "wru_confessions_bot"
