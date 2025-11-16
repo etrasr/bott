@@ -3836,8 +3836,7 @@ def main():
     
     # IMPORTANT: /forcerestore handler placed BEFORE unknown handler to avoid "I don't know that command"
     application.add_handler(CommandHandler("forcerestore", force_restore))
-
-application.add_handler(CommandHandler("testbackup", test_backup))
+    application.add_handler(CommandHandler("testbackup", test_backup))
     
     application.add_handler(MessageHandler(filters.COMMAND, unknown))
     
