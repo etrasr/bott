@@ -3778,12 +3778,10 @@ def main():
     application.add_handler(CallbackQueryHandler(secondary_callback_handler, pattern=f"^{CB_MENU_MAIN}$"))
     application.add_handler(CommandHandler("pending", pending_count, filters=filters.Chat(chat_id=ADMIN_GROUP_ID)))
     application.add_handler(MessageHandler(filters.COMMAND, unknown))
-
-# ⬇️ ADD THIS LINE RIGHT HERE:
-application.add_handler(CommandHandler("forcerestore", force_restore))
+    application.add_handler(CommandHandler("forcerestore", force_restore))  # Your new line
     
-    logger.info("Bot started and polling...")
-    application.run_polling(allowed_updates=Update.ALL_TYPES)
+    logger.info("Bot started and polling...")  # ⬅️ ADD 4 SPACES AT THE BEGINNING
+    application.run_polling(allowed_updates=Update.ALL_TYPES)  # ⬅️ ADD 4 SPACES AT THE BEGINNING
 
 if __name__ == "__main__":
     main()
