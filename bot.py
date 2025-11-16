@@ -2808,7 +2808,7 @@ async def confession_review_callback(update: Update, context: ContextTypes.DEFAU
         
         # 🆕 ADD THIS LINE RIGHT HERE - Backup after confession submission
         trigger_immediate_backup()
-                
+                  
         conf = get_confession(conf_id)
         admin_text = format_confession_for_admin(conf)
         # ... rest of the code continues ...
@@ -3097,7 +3097,7 @@ async def comment_receive(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     comment_id = save_comment(conf_id, msg.from_user.id, text, parent_comment_id, file_id, file_type)
 
-        trigger_immediate_backup()
+        trigger_immediate_backup()  
     
     conf = get_confession(conf_id)
     if conf and conf.get('channel_message_id'):
@@ -3179,7 +3179,7 @@ async def reply_receive(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     comment_id = save_comment(conf_id, msg.from_user.id, text, parent_comment_id, file_id, file_type)
 
-        trigger_immediate_backup()
+        trigger_immediate_backup()                       
     
     conf = get_confession(conf_id)
     if conf and conf.get('channel_message_id'):
