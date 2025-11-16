@@ -26,7 +26,7 @@ from datetime import datetime
 import threading
 import time
 
-DB_PATH = 'confession_bot.db'
+DB_PATH = 'confession.db'
 DROPBOX_ACCESS_TOKEN = os.getenv('DROPBOX_ACCESS_TOKEN')
 dbx = dropbox.Dropbox(DROPBOX_ACCESS_TOKEN)
 
